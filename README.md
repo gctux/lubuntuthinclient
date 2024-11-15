@@ -1,1 +1,1 @@
-# lubuntuthinclient
+# Einrichten eines RDP-Thin-Clients auf der Basis von Lubuntu
