@@ -16,3 +16,5 @@ Das Starten anderer Anwendungen bzw. das Verändern der Konfiguration des System
 - [Installation von Lubuntu](#installation-von-lubunt)
 
 ## Installation von Lubuntu
+
+Zur Installation wurde die aktuell stabile Version
