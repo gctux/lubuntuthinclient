@@ -13,8 +13,12 @@ Das Starten anderer Anwendungen bzw. das Verändern der Konfiguration des System
 ## Inhaltsverzeichnis
 
 
-- [Installation von Lubuntu](#installation-von-lubunt)
+- [Installation von Lubuntu](#installation-von-lubuntu)
 
 ## Installation von Lubuntu
 
-Zur Installation wurde die aktuell stabile Version
+Zur Installation wurde die aktuell stabile Version 24.04.1 (https://lubuntu.me/downloads/) von Lubuntu verwendet. Eine Installationsanleitung findet man hier:
+
+https://manual.lubuntu.me/stable/1/Installing_lubuntu.html
+
+Bei der Installation wurde minimale Installation gewählt und ein Nutzer mit administrativen Rechten (sudo, Nutzername: admin) eingerichtet.
