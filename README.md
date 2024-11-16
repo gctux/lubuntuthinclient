@@ -14,6 +14,8 @@ Das Starten anderer Anwendungen bzw. das Verändern der Konfiguration des System
 
 
 - [Installation von Lubuntu](#installation-von-lubuntu)
+- [Nachinstallation von Paketen](#nachinstallation-von-paketen)
+- [Einrichten des Standardnutzers](#einrichten-des-standardnutzers)
 
 ## Installation von Lubuntu
 
@@ -22,3 +24,19 @@ Zur Installation wurde die aktuell stabile Version 24.04.1 (https://lubuntu.me/d
 https://manual.lubuntu.me/stable/1/Installing_lubuntu.html
 
 Bei der Installation wurde minimale Installation gewählt und ein Nutzer mit administrativen Rechten (sudo, Nutzername: admin) eingerichtet.
+
+## Nachinstallation von Paketen
+
+Für den Thin Client wird noch weitere Software benötigt:
+
+  * Featherpad - ein einfacher Editor zum Bearbeiten der Scripte
+  * Freerdp3 - der eigentliche RDP-Client
+  * Zenity - eine GUI-Bibliothek für Shellscripte
+
+```
+sudo apt -y upgrade && sudo apt -y dist-upgrade
+sudo apt install featherpad freerdp3-x11 freerdp3-wayland zenity
+```
+
+## Einrichten des Standardnutzers
+
