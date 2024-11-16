@@ -38,5 +38,24 @@ sudo apt -y upgrade && sudo apt -y dist-upgrade
 sudo apt install featherpad freerdp3-x11 freerdp3-wayland zenity
 ```
 
-## Einrichten des Standardnutzers
+## Einrichten des Standardnutzers 
+
+**Möglichkeit 1: über die Shell**
+
+Mit dem folgenden Befehl in der Shell wird ein Standardbenutzer mit dem Nutzernamen "user" angelegt
+
+```
+sudo adduser user
+```
+
+Folgende Dinge werden im Dialog abgefragt:
+  * Passwort
+  * Wiederholung des Passworts
+  * Vollständiger Name: _User_
+  * Zimmernummer: _leer lassen_
+  * Telefon geschäftlich: _leer lassen_
+  * Telefon privat: _leer lassen_
+  * Sonstiges: _leer lassen_
+
+Im Anschluss muss nach bestätigt werden, dass die Daten korrekt sind.
 
