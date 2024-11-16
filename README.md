@@ -59,3 +59,6 @@ Folgende Dinge werden im Dialog abgefragt:
 
 Im Anschluss muss nach bestätigt werden, dass die Daten korrekt sind.
 
+**Möglichkeit 2: über die grafische Benutzerverwaltung**
+
+Über das Anwendungsmenü ->
