@@ -61,4 +61,6 @@ Im Anschluss muss nach bestätigt werden, dass die Daten korrekt sind.
 
 **Möglichkeit 2: über die grafische Benutzerverwaltung**
 
-Über das Anwendungsmenü ->
+Über das Anwendungsmenü -> Einstellungen -> LXQt-Systemeinstellungen -> Benutzer und Gruppen
+
+Über die Schaltfäche "Hinzufügen" kann man nun einen neuen Nutzer anlegen. Im Reiter Allgemein trägt man den Nutzername (user) ein. Dann kann man noch den vollständigen Namen (User) eintragen. Es ist sinnvoll als primäre Gruppe noch den Nutzernamen einzutragen. (Ubuntu Standard)
