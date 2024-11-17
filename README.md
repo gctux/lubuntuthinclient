@@ -16,6 +16,7 @@ Das Starten anderer Anwendungen bzw. das Verändern der Konfiguration des System
 - [Installation von Lubuntu](#installation-von-lubuntu)
 - [Nachinstallation von Paketen](#nachinstallation-von-paketen)
 - [Einrichten des Standardnutzers](#einrichten-des-standardnutzers)
+- [Anpassen der Oberfäche des Standardbenutzers](#anpassen-der-oberfäche-des-standardbenutzers)
 
 ## Installation von Lubuntu
 
@@ -32,10 +33,11 @@ Für den Thin Client wird noch weitere Software benötigt:
   * Featherpad - ein einfacher Editor zum Bearbeiten der Scripte
   * Freerdp3 - der eigentliche RDP-Client
   * Zenity - eine GUI-Bibliothek für Shellscripte
+  * Falkon - ein einfacher schneller Webbrowser
 
 ```
 sudo apt -y upgrade && sudo apt -y dist-upgrade
-sudo apt install featherpad freerdp3-x11 freerdp3-wayland zenity
+sudo apt install featherpad freerdp3-x11 freerdp3-wayland zenity falkon
 ```
 
 ## Einrichten des Standardnutzers 
@@ -64,3 +66,7 @@ Im Anschluss muss nach bestätigt werden, dass die Daten korrekt sind.
 Über das Anwendungsmenü -> Einstellungen -> LXQt-Systemeinstellungen -> Benutzer und Gruppen
 
 Über die Schaltfäche "Hinzufügen" kann man nun einen neuen Nutzer anlegen. Im Reiter Allgemein trägt man den Nutzername (user) ein. Dann kann man noch den vollständigen Namen (User) eintragen. Es ist sinnvoll als primäre Gruppe noch den Nutzernamen einzutragen, so dass eine entsprechende Gruppe angelegt wird. (Ubuntu Standard)
+
+## Anpassen der Oberfäche des Standardbenutzers
+
+Zunächst meldet man sich als Standardbenutzer (user) an, um die Oberfläche anzupassen.
