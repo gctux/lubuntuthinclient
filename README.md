@@ -24,7 +24,7 @@ Zur Installation wurde die aktuell stabile Version 24.04.1 (https://lubuntu.me/d
 
 https://manual.lubuntu.me/stable/1/Installing_lubuntu.html
 
-Bei der Installation wurde minimale Installation gewählt und ein Nutzer mit administrativen Rechten (sudo, Nutzername: admin) eingerichtet.
+Bei der Installation wurde minimale Installation gewählt und ein Nutzer mit administrativen Rechten (sudo, Nutzername: admin) eingerichtet. Man sollte bei der Installation "gesamte Festplatte löschen" auswählen.
 
 ## Nachinstallation von Paketen
 
