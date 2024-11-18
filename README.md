@@ -67,6 +67,10 @@ Im Anschluss muss nach bestätigt werden, dass die Daten korrekt sind.
 
 Über die Schaltfäche "Hinzufügen" kann man nun einen neuen Nutzer anlegen. Im Reiter Allgemein trägt man den Nutzername (user) ein. Dann kann man noch den vollständigen Namen (User) eintragen. Es ist sinnvoll als primäre Gruppe noch den Nutzernamen einzutragen, so dass eine entsprechende Gruppe angelegt wird. (Ubuntu Standard)
 
+## Installation der Scripte füdr den Standardnutzer
+
+
+
 ## Anpassen der Oberfäche des Standardbenutzers
 
 Zunächst meldet man sich als Standardbenutzer (user) an, um die Oberfläche anzupassen.
