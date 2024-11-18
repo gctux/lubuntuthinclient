@@ -67,10 +67,34 @@ Im Anschluss muss nach bestätigt werden, dass die Daten korrekt sind.
 
 Über die Schaltfäche "Hinzufügen" kann man nun einen neuen Nutzer anlegen. Im Reiter Allgemein trägt man den Nutzername (user) ein. Dann kann man noch den vollständigen Namen (User) eintragen. Es ist sinnvoll als primäre Gruppe noch den Nutzernamen einzutragen, so dass eine entsprechende Gruppe angelegt wird. (Ubuntu Standard)
 
-## Installation der Scripte füdr den Standardnutzer
+## Installation der Scripte für den Standardnutzer
 
+Der Nutzer soll letztendlich nur zwei Shellscripte ausführen können. Die Scripte müssen mit Administratorrechten nach /usr/local/bin kopiert werden und ausführbar gemacht werden. Ich gehe davon aus, dass im Verzeichnist der Scripte der User Admin ein Terminal geöffnet hat.
 
+```
+sudo cp startfreerdp.sh startterminal.sh /usr/local/bin/
+cd /usr/local/bin
+sudo chmod +x startfreerdp.sh
+sudo chmod +x startterminal.sh
+```
+Beide Scripte sind in diesem Git-Repository enthalten, die Funktionsweise wird im Quelltext durch Kommentare beschrieben. Nachdem die Skripte kopiert sind sollte man ihre Funktion als Nutzer testen.
 
 ## Anpassen der Oberfäche des Standardbenutzers
 
 Zunächst meldet man sich als Standardbenutzer (user) an, um die Oberfläche anzupassen.
+
+Progammstarter für das Programmmenü werden in Lubuntu in Textdateien mit der Endung .desktop organisiert. Diese Dateien liegen für alle installierten Anwendungen in Ordner /usr/share/applications. Auch im Homeverzeichnis eines Nutzers (z.B. user) können solche Dateien unter /home/user/.local/share liegen. Die Dateien in diesen Ordner werden zuerst ausgewertet.
+
+
+Wenn man eine solche Datei ins Desktopverzeichnis eines Nutzers (/home/user/Desktop) kopiert, ensteht dort ein Programmstarter auf dem Desktop. Um das Programm zu starten muss man durch Rechtsklick das Programm noch als vertrauenswürdig einstufen.
+
+**Desktop anpassen**
+
+  * Rechtsklick auf dem Desktop -> Arbeitsflächeneinstellungen
+  * Reiter Hintergrund -> Bild 2210-blue-logo.jpg
+  * Reiter Erweitert -> alle Haken entfernen
+
+**Verhalten bei USB-Sticks anpassen**
+
+  * Dateimanager (pcmanfm-qt) öffnen 
+  * Bearbeiten -> Einstellungen -> Datenträger -> Haken bei "Verfügbare Optionen ..." entfernen

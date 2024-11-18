@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Windows-Terminalserver
+GenericName=
+Comment=
+Exec=/usr/local/bin/startfreerdp.sh
+Type=Application
+Icon=/usr/share/icons/xfreerdp.png
+Terminal=false
