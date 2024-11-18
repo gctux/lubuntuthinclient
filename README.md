@@ -16,6 +16,7 @@ Das Starten anderer Anwendungen bzw. das Verändern der Konfiguration des System
 - [Installation von Lubuntu](#installation-von-lubuntu)
 - [Nachinstallation von Paketen](#nachinstallation-von-paketen)
 - [Einrichten des Standardnutzers](#einrichten-des-standardnutzers)
+- [Installation der Scripte für den Standardnutzer](#installation-der-scripte-für-den-standardnutzer)
 - [Anpassen der Oberfäche des Standardbenutzers](#anpassen-der-oberfäche-des-standardbenutzers)
 
 ## Installation von Lubuntu
@@ -83,7 +84,7 @@ Beide Scripte sind in diesem Git-Repository enthalten, die Funktionsweise wird i
 
 Zunächst meldet man sich als Standardbenutzer (user) an, um die Oberfläche anzupassen.
 
-Progammstarter für das Programmmenü werden in Lubuntu in Textdateien mit der Endung .desktop organisiert. Diese Dateien liegen für alle installierten Anwendungen in Ordner /usr/share/applications. Auch im Homeverzeichnis eines Nutzers (z.B. user) können solche Dateien unter /home/user/.local/share liegen. Die Dateien in diesen Ordner werden zuerst ausgewertet.
+Progammstarter für das Programmmenü werden in Lubuntu in Textdateien mit der Endung .desktop organisiert. Diese Dateien liegen für alle installierten Anwendungen in Ordner /usr/share/applications. Auch im Homeverzeichnis eines Nutzers (z.B. user) können solche Dateien unter /home/user/.local/share/applications liegen. Die Dateien in diesen Ordner werden zuerst ausgewertet.
 
 
 Wenn man eine solche Datei ins Desktopverzeichnis eines Nutzers (/home/user/Desktop) kopiert, ensteht dort ein Programmstarter auf dem Desktop. Um das Programm zu starten muss man durch Rechtsklick das Programm noch als vertrauenswürdig einstufen.
@@ -93,8 +94,33 @@ Wenn man eine solche Datei ins Desktopverzeichnis eines Nutzers (/home/user/Desk
   * Rechtsklick auf dem Desktop -> Arbeitsflächeneinstellungen
   * Reiter Hintergrund -> Bild 2210-blue-logo.jpg
   * Reiter Erweitert -> alle Haken entfernen
+  * die Datei Windows-Terminalserver.desktop nach /home/user/Desktop kopieren
+  * Rechtsklick -> Haken bei: Dieser ausführbaren Datei vertrauen
 
 **Verhalten bei USB-Sticks anpassen**
 
   * Dateimanager (pcmanfm-qt) öffnen 
   * Bearbeiten -> Einstellungen -> Datenträger -> Haken bei "Verfügbare Optionen ..." entfernen
+
+**Tastenkombinationen anpassen**
+
+  * Startmenü -> Einstellungen -> LXQT-Systemeinstellung -> Kurzbefehl Konfiguration
+  * Launch Terminal ändern -> Befehl: /usr/local/bin/startterminal.sh
+  * alle anderen Kurzbefehle deaktivieren
+
+**Leiste anpassen**
+  * Rechtsklick auf Leiste -> Leiste konfigurieren
+  * Folgende Eiträge entfernen:
+    * Arbeitsflächenumschalter
+    * Schnellstarter
+    * Arbeitsfläche anzeigen
+    * Wechseldatenträger
+
+**Anwendungsmenü anpassen**
+
+Um einen Menüpunkt im Anwendungsmenü zu verstecken, kopiert man die entsprechende Desktopdatei von /usr/share/applications nach /home/user/.local/share/applications und fügt die Zeile 
+
+```
+NoDesktop=true
+```
+hinzu. Wenn das Verzeichnis nicht existiert, muss es angelegt werden.
