@@ -114,13 +114,24 @@ Wenn man eine solche Datei ins Desktopverzeichnis eines Nutzers (/home/user/Desk
     * Arbeitsflächenumschalter
     * Schnellstarter
     * Arbeitsfläche anzeigen
-    * Wechseldatenträger
+  * Rechtsklick auf Leiste -> Leiste sperren
 
 **Anwendungsmenü anpassen**
 
-Um einen Menüpunkt im Anwendungsmenü zu verstecken, kopiert man die entsprechende Desktopdatei von /usr/share/applications nach /home/user/.local/share/applications und fügt die Zeile 
+Um einen Menüpunkt im Anwendungsmenü zu verstecken, kopiert man die entsprechende Desktopdatei von /usr/share/applications nach /home/user/.local/share/applications und fügt bei allen Desktopdateien außer lxqt-shutdown.desktop und lxqt-reboot.desktop die Zeile 
 
 ```
 NoDesktop=true
 ```
-hinzu. Wenn das Verzeichnis nicht existiert, muss es angelegt werden.
+hinzu. Wenn das Verzeichnis nicht existiert, muss es angelegt werden. Weiterhin kopiert man die Datei Windows-Terminalserver.desktop nach /home/user/.local/share/applications, damit sie im Menü ersccheint.
+
+**Schreibschutz für die Konfigurationsdateien**
+
+Damit der Nutzer User die Konfigurationsdateien nicht ändern kann, übergeben wir die Eigentümerschaft an Admin und machen damit die Dateien für User nur lesbar.
+
+```
+sudo chown -R admin:admin /home/user/Desktop
+sudo chown -R admin:admin /home/user/.local/share/applications
+sudo chown -R admin:admin /home/user/.config/lxqt
+sudo chown -R admin:admin /home/user/.config/pcmanfm-qt
+```
