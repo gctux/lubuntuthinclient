@@ -224,7 +224,9 @@ Zum Clonen des Systems gibt es verschiedene Tools. Ich habe mich für eine Ubunt
 
 Nach dem Klonen muss eventuell der Rechnername geändert erden. Dies geschieht mit Administratorrechten in den Dateien:
 
+```
 /etc/hosts
 /etc/hostname
+```
 
 Danach muss das System neu gestartet werden.
