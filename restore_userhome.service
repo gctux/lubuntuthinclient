@@ -1,0 +1,11 @@
+[Unit]
+Description=Setzt das Heimatverzeichnis von User nach jedem Neustart in den ursprünglichen Zustand
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/restore_userhome.sh
+User=root
+
+[Install]
+WantedBy=multi-user.target

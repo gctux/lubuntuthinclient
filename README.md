@@ -18,6 +18,7 @@ Das Starten anderer Anwendungen bzw. das Verändern der Konfiguration des System
 - [Einrichten des Standardnutzers](#einrichten-des-standardnutzers)
 - [Installation der Scripte für den Standardnutzer](#installation-der-scripte-für-den-standardnutzer)
 - [Anpassen der Oberfäche des Standardbenutzers](#anpassen-der-oberfäche-des-standardbenutzers)
+- [Konfiguration des Autologins für User](#konfiguration-des-autologins-für-user)
 
 ## Installation von Lubuntu
 
@@ -135,3 +136,25 @@ sudo chown -R admin:admin /home/user/.local/share/applications
 sudo chown -R admin:admin /home/user/.config/lxqt
 sudo chown -R admin:admin /home/user/.config/pcmanfm-qt
 ```
+
+## Konfiguration des Autologins für User
+
+Beim Start dees Thin Clients soll User automatisch angemeldet werden. 
+
+  * Als Admin: Anwendungsmenü -> Zubehör -> SDDM Konfiguration
+  * Bei "Benutzername für automatische Anmeldung" user eintragen
+  * Speichern und mit Admin-Passwort bestätigen
+  * durch Neustart testen
+
+Um sich als Standartbenutzer abzumelden, startet man mit Strg+Alt+t ein Terminal, gibt das Passwort für das Script ein und gibt im Terminal den Befehl
+
+```
+lxqt-leave --logout
+```
+ein.
+
+## Einrichten eines Backup- und eiens Restorescripts
+
+Mit dem Backupsscript soll der aktuelle Zustand des Nutzerverzeichnisses gesichert werden. Das Restorescript spielt das Verzeichnis bei jedem Systemtemstart wieder ein. In den Scripten wird rsync verwendet, so dass die Rechte und die Besitzverhältnisse erhalten bleiben.
+
+
