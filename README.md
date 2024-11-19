@@ -157,4 +157,20 @@ ein.
 
 Mit dem Backupsscript soll der aktuelle Zustand des Nutzerverzeichnisses gesichert werden. Das Restorescript spielt das Verzeichnis bei jedem Systemtemstart wieder ein. In den Scripten wird rsync verwendet, so dass die Rechte und die Besitzverhältnisse erhalten bleiben.
 
+Die beiden Scriptdateien backup_userhome.sh und restore_userhome.sh können von diesem Repository heruntergeladen werden. Hier ist ihr Inhalt:
 
+backup_userhome.sh:
+
+```
+#!/bin/bash -e
+
+rsync -a /home/user/ /home/admin/Backup/user/
+```
+
+restore_userhome.sh:
+
+```
+#!/bin/bash -e
+
+rsync -a --delete /home/admin/Backup/user/ /home/user/
+```
