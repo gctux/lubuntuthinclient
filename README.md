@@ -19,6 +19,7 @@ Das Starten anderer Anwendungen bzw. das Verändern der Konfiguration des System
 - [Installation der Scripte für den Standardnutzer](#installation-der-scripte-für-den-standardnutzer)
 - [Anpassen der Oberfäche des Standardbenutzers](#anpassen-der-oberfäche-des-standardbenutzers)
 - [Konfiguration des Autologins für User](#konfiguration-des-autologins-für-user)
+- [System clonen](#system-clonen)
 
 ## Installation von Lubuntu
 
@@ -174,3 +175,56 @@ restore_userhome.sh:
 
 rsync -a --delete /home/admin/Backup/user/ /home/user/
 ```
+
+In restore_userhome.sh erscheint noch zusätzlich der Parameter --delete, so dass Dateien, die User eventuell nachträglich angelegt hat, gelöscht werden.
+
+Diese beiden Dateien kopiert man nach /usr/local/bin und macht sie ausführbar:
+
+```
+sudo chmod +x /usr/local/bin/backup_userhome.sh
+sudo chmod +x /usr/local/bin/restore_userhome.sh
+```
+
+
+Wenn man das Nutzerverzeichnis fertig konfiguriert hat, kann man backup_userhome.sh ausführen:
+
+```
+sudo /usr/local/bin/backup_userhome.sh
+```
+
+Nun kann man das Restore-Script testen, indem man Änderungen in /home/user vornimmt und diese mit restore_userhome.sh rückgängig macht.
+
+Zum Schluss soll das Restore-Script noch als Systemdienst eingerichtet werden, der bei jedem Systemstart läuft. Dazu kopiert man die Datei restore_userhome.service mit dem Inhalt:
+
+```
+[Unit]
+Description=Setzt das Heimatverzeichnis von User nach jedem Neustart in den ursprünglichen Zustand
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/restore_userhome.sh
+User=root
+
+[Install]
+WantedBy=multi-user.target
+```
+
+nach /etc/systemd/system/. Anschließend kann man den Dienst einrichten:
+
+```
+sudo systemctl enable resore_userhome.service
+```
+
+Jetzt wird das Heimatverzeichnis von User bei jedem Systemstart wieder in den ursprünglichen Zustand gesetzt.
+
+## System clonen
+
+Zum Clonen des Systems gibt es verschiedene Tools. Ich habe mich für eine Ubuntu-Live-CD entschieden. Dort ist das klonen mit dem Laufwerke-Tool recht einfach und schnell.
+
+Nach dem Klonen muss eventuell der Rechnername geändert erden. Dies geschieht mit Administratorrechten in den Dateien:
+
+/etc/hosts
+/etc/hostname
+
+Danach muss das System neu gestartet werden.
