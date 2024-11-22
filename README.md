@@ -220,6 +220,8 @@ Jetzt wird das Heimatverzeichnis von User bei jedem Systemstart wieder in den ur
 
 ## Automatische Updates
 
+
+
 ## System clonen
 
 Zum Clonen des Systems gibt es verschiedene Tools. Ich habe mich für eine Clonzilla entschieden. Das Klonen geht damit sehr schnell (ca.10 min) und geklonte Image ist nur ca. 4 GB groß.
