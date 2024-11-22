@@ -218,9 +218,11 @@ sudo systemctl enable resore_userhome.service
 
 Jetzt wird das Heimatverzeichnis von User bei jedem Systemstart wieder in den ursprünglichen Zustand gesetzt.
 
+## Automatische Updates
+
 ## System clonen
 
-Zum Clonen des Systems gibt es verschiedene Tools. Ich habe mich für eine Ubuntu-Live-CD entschieden. Dort ist das klonen mit dem Laufwerke-Tool recht einfach und schnell.
+Zum Clonen des Systems gibt es verschiedene Tools. Ich habe mich für eine Clonzilla entschieden. Das Klonen geht damit sehr schnell (ca.10 min) und geklonte Image ist nur ca. 4 GB groß.
 
 Nach dem Klonen muss eventuell der Rechnername geändert erden. Dies geschieht mit Administratorrechten in den Dateien:
 
