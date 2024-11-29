@@ -155,6 +155,25 @@ lxqt-leave --logout
 ```
 ein.
 
+**Verbesserung:**
+
+An Stelle des Scripts startterminal.sh kann auch eine Ergänzung zur Datei .bashrc in /home/user hinzugefügt werden. Damit wird das Passwort direkt in der Shell abgefragt. Mit <STRG>-<ALT>-<t> startet man dann einfach ein qterminal.
+
+```
+echo "Passwort:"
+read -s PASSWORD
+DEFAULT="MD5-Summe-des-Admin-Passworts"
+PASSWORDMD5=$(echo -n "$PASSWORD" | md5sum | awk '{print $1}')
+if [ "$PASSWORDMD5" != "$DEFAULT" ]; then
+	exit
+fi
+```
+Die MD5-Summe kann man im Terminal mit 
+
+```
+echo -n "MeinAdminPasswort" | md5sum | awk '{print $1}'
+```
+erzeugen.
 ## Einrichten eines Backup- und eiens Restorescripts
 
 Mit dem Backupsscript soll der aktuelle Zustand des Nutzerverzeichnisses gesichert werden. Das Restorescript spielt das Verzeichnis bei jedem Systemtemstart wieder ein. In den Scripten wird rsync verwendet, so dass die Rechte und die Besitzverhältnisse erhalten bleiben.
