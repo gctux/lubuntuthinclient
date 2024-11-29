@@ -220,13 +220,32 @@ Jetzt wird das Heimatverzeichnis von User bei jedem Systemstart wieder in den ur
 
 ## Automatische Updates
 
+Unter Ubuntu ist das Paket unattended-upgrades für unbeaufsichtigte Updates verantwortlich. Bei Lubuntu ist es bereits installiert. Man kann das wie folgt als admin nochmal überprüfen.
 
+
+```
+sudo apt update
+sudo apt install unattended-upgrades
+sudo dpkg-reconfigure -plow unattended-upgrades
+```
+
+Damit der normale Nutzer keine Updateinformationen erhält, kann man das Paket lubuntu-update-notifier entfernen.
+
+```
+sudo apt purge lubuntu-update-notifier
+```
+
+Von Zeit zu Zeit kann man die Updates als admin überprüfen.
+
+```
+sudo apt -y update && sudo apt -y dist-upgrade
+```
 
 ## System clonen
 
-Zum Clonen des Systems gibt es verschiedene Tools. Ich habe mich für eine Clonzilla entschieden. Das Klonen geht damit sehr schnell (ca.10 min) und geklonte Image ist nur ca. 4 GB groß.
+Zum Clonen des Systems gibt es verschiedene Tools. Ich habe mich für eine Clonezilla entschieden. Das Klonen geht damit sehr schnell (ca.10 min) und geklonte Image ist nur ca. 4 GB groß.
 
-Nach dem Klonen muss eventuell der Rechnername geändert erden. Dies geschieht mit Administratorrechten in den Dateien:
+Nach dem Klonen muss eventuell der Rechnername geändert werden. Dies geschieht mit Administratorrechten in den Dateien:
 
 ```
 /etc/hosts
