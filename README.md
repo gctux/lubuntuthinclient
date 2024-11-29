@@ -19,6 +19,7 @@ Das Starten anderer Anwendungen bzw. das Verändern der Konfiguration des System
 - [Installation der Scripte für den Standardnutzer](#installation-der-scripte-für-den-standardnutzer)
 - [Anpassen der Oberfäche des Standardbenutzers](#anpassen-der-oberfäche-des-standardbenutzers)
 - [Konfiguration des Autologins für User](#konfiguration-des-autologins-für-user)
+- [Automatische Updates](#automatische-updates)
 - [System clonen](#system-clonen)
 
 ## Installation von Lubuntu
