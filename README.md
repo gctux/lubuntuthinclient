@@ -234,7 +234,7 @@ WantedBy=multi-user.target
 nach /etc/systemd/system/. Anschließend kann man den Dienst einrichten:
 
 ```
-sudo systemctl enable resore_userhome.service
+sudo systemctl enable restore_userhome.service
 ```
 
 Jetzt wird das Heimatverzeichnis von User bei jedem Systemstart wieder in den ursprünglichen Zustand gesetzt.
