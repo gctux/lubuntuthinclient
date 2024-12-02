@@ -108,8 +108,7 @@ Wenn man eine solche Datei ins Desktopverzeichnis eines Nutzers (/home/user/Desk
 **Tastenkombinationen anpassen**
 
   * Startmenü -> Einstellungen -> LXQT-Systemeinstellung -> Kurzbefehl Konfiguration
-  * Launch Terminal ändern -> Befehl: /usr/local/bin/startterminal.sh
-  * alle anderen Kurzbefehle deaktivieren
+  * außer Lauch Terminal alle anderen Kurzbefehle deaktivieren
 
 **Leiste anpassen**
   * Rechtsklick auf Leiste -> Leiste konfigurieren
@@ -117,6 +116,7 @@ Wenn man eine solche Datei ins Desktopverzeichnis eines Nutzers (/home/user/Desk
     * Arbeitsflächenumschalter
     * Schnellstarter
     * Arbeitsfläche anzeigen
+    * Wechseldatenträger
   * Rechtsklick auf Leiste -> Leiste sperren
 
 **Anwendungsmenü anpassen**
@@ -126,7 +126,27 @@ Um einen Menüpunkt im Anwendungsmenü zu verstecken, kopiert man die entspreche
 ```
 NoDesktop=true
 ```
-hinzu. Wenn das Verzeichnis nicht existiert, muss es angelegt werden. Weiterhin kopiert man die Datei Windows-Terminalserver.desktop nach /home/user/.local/share/applications, damit sie im Menü ersccheint.
+hinzu. Wenn das Verzeichnis nicht existiert, muss es angelegt werden. Weiterhin kopiert man die Datei Windows-Terminalserver.desktop nach /home/user/.local/share/applications, damit sie im Menü erscheint.
+
+**.bashrc anpassen**
+
+An .bashrc die folgenden Zeilen anhängen
+
+```
+echo "Passwort:"
+read -s PASSWORD
+DEFAULT="MD5-Summe-des-Admin-Passworts"
+PASSWORDMD5=$(echo -n "$PASSWORD" | md5sum | awk '{print $1}')
+if [ "$PASSWORDMD5" != "$DEFAULT" ]; then
+	exit
+fi
+```
+Die MD5-Summe kann man im Terminal mit 
+
+```
+echo -n "MeinAdminPasswort" | md5sum | awk '{print $1}'
+```
+erzeugen.
 
 **Schreibschutz für die Konfigurationsdateien**
 
