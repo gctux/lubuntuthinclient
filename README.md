@@ -124,7 +124,7 @@ Wenn man eine solche Datei ins Desktopverzeichnis eines Nutzers (/home/user/Desk
 Um einen Menüpunkt im Anwendungsmenü zu verstecken, kopiert man die entsprechende Desktopdatei von /usr/share/applications nach /home/user/.local/share/applications und fügt bei allen Desktopdateien außer lxqt-shutdown.desktop und lxqt-reboot.desktop die Zeile 
 
 ```
-NoDesktop=true
+NoDisplay=true
 ```
 hinzu. Wenn das Verzeichnis nicht existiert, muss es angelegt werden. Weiterhin kopiert man die Datei Windows-Terminalserver.desktop nach /home/user/.local/share/applications, damit sie im Menü erscheint.
 
