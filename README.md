@@ -133,6 +133,12 @@ hinzu. Wenn das Verzeichnis nicht existiert, muss es angelegt werden. Weiterhin 
 An .bashrc die folgenden Zeilen anhängen
 
 ```
+handle_sigint() {
+  echo "SIGINT abgefangen! Das Skript wird nicht beendet."
+}
+ 
+trap handle_sigint SIGINT
+
 echo "Passwort:"
 read -s PASSWORD
 DEFAULT="MD5-Summe-des-Admin-Passworts"
