@@ -181,6 +181,12 @@ ein.
 An Stelle des Scripts startterminal.sh kann auch eine Ergänzung zur Datei .bashrc in /home/user hinzugefügt werden. Damit wird das Passwort direkt in der Shell abgefragt. Mit <STRG>-<ALT>-<t> startet man dann einfach ein qterminal.
 
 ```
+handle_sigint() {
+  echo "SIGINT abgefangen! Das Skript wird nicht beendet."
+}
+ 
+trap handle_sigint SIGINT
+
 echo "Passwort:"
 read -s PASSWORD
 DEFAULT="MD5-Summe-des-Admin-Passworts"
