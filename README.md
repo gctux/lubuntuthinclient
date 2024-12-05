@@ -294,6 +294,14 @@ Von Zeit zu Zeit kann man die Updates als admin überprüfen.
 sudo apt -y update && sudo apt -y dist-upgrade
 ```
 
+Bei einigen Systemen machte auch der Bildschirmschoner Probleme. Mit 
+
+```
+sudo apt purge xscreensaver*
+```
+
+kann man ihn entfernen.
+
 ## System clonen
 
 Zum Clonen des Systems gibt es verschiedene Tools. Ich habe mich für eine Clonezilla entschieden. Das Klonen geht damit sehr schnell (ca.10 min) und geklonte Image ist nur ca. 4 GB groß.
