@@ -320,9 +320,9 @@ Danach muss das System neu gestartet werden.
 
 Als admin anmelden!
 
-´´´
+```
 wget https://raw.githubusercontent.com/gctux/lubuntuthinclient/refs/heads/main/50-mouse-acceleration.conf
 sudo mv 50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
 sudo reboot
-´´´
+```
 
