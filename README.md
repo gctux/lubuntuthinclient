@@ -21,6 +21,7 @@ Das Starten anderer Anwendungen bzw. das Verändern der Konfiguration des System
 - [Konfiguration des Autologins für User](#konfiguration-des-autologins-für-user)
 - [Automatische Updates](#automatische-updates)
 - [System clonen](#system-clonen)
+- [Mausgeschwindigkeit anpassen](#mausgeschwindigkeit-anpassen)
 
 ## Installation von Lubuntu
 
