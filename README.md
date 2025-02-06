@@ -314,3 +314,14 @@ Nach dem Klonen muss eventuell der Rechnername geändert werden. Dies geschieht 
 ```
 
 Danach muss das System neu gestartet werden.
+
+## Mausgeschwindigkeit anpassen
+
+Als admin anmelden!
+
+´´´
+https://raw.githubusercontent.com/gctux/lubuntuthinclient/refs/heads/main/50-mouse-acceleration.conf
+sudo mv 50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
+sudo reboot
+´´´
+
